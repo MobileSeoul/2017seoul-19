@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp">
+        <ImageView
+            android:id="@+id/iv_course"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:drawingCacheQuality="high"
+            android:padding="0dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_course_number"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:textColor="#ffff00"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:background="@drawable/course_bg"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_course_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18.5dp"
+        android:layout_marginRight="18.5dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/tv_course_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18.5dp"
+        android:layout_marginRight="18.5dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#000000"
+        android:textSize="12.5dp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

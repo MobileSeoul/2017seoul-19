@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize">
+            <include layout="@layout/layout_toolbar_v2"/>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <!--
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFF00FF">
+    -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageButton
+                android:id="@+id/locationSave"
+                android:layout_width="82dp"
+                android:layout_height="40dp"
+                android:layout_toLeftOf="@+id/locationReset"
+                android:layout_alignTop="@+id/locationReset"
+                android:background="@drawable/route_save"
+                android:scaleType="fitStart"/>
+
+            <ImageButton
+                android:id="@+id/locationReset"
+                android:layout_width="82dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="11dp"
+                android:layout_marginLeft="-3dp"
+                android:background="@drawable/route_reset"
+                android:scaleType="fitStart"/>
+
+            <ImageButton
+                android:id="@+id/locationCancel"
+                android:layout_width="82dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/locationReset"
+                android:layout_alignTop="@+id/locationReset"
+                android:layout_marginLeft="-3dp"
+                android:background="@drawable/route_cancel"
+                android:scaleType="fitStart"/>
+
+
+        <SlidingDrawer
+            android:id="@+id/slide"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:allowSingleTap="true"
+            android:animateOnClick="true"
+            android:layout_alignParentBottom="true"
+            android:bottomOffset="-20dp"
+            android:content="@+id/content"
+            android:handle="@+id/handle"
+            android:orientation="vertical"
+            android:topOffset="-30dp"
+            >
+            <LinearLayout
+                android:id="@+id/handle"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+
+                <ImageView
+                    android:src="@drawable/recommend_open"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/recommend_background"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:src="@drawable/recommend_close"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/horizontal_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+            </LinearLayout>
+        </SlidingDrawer>
+        </RelativeLayout>
+    </fragment>
+ </LinearLayout>
